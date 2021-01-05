@@ -1,0 +1,100 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>安装iPad移动展业</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="false" name="twcClient" id="twcClient">
+    <meta name="aplus-touch" content="1">
+    <style>
+		body{font-size:100%;background-color: #aaa}
+        html{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-size:100%;}
+        html, body{padding:0;margin:0;width:100%;height:100%;}
+        *{box-sizing:border-box; padding:0px; margin:0px;}
+        body{font-weight:normal;line-height:1.6em;font-family:"Microsoft Yahei", arial, "Hiragino Sans GB", sans-serif;}
+        ul,li{ list-style:none;}
+        .hide{ display:none;}
+        /*移动场景*/
+        .ydcj_bg{ background-color:#f6f6f6;}
+        .logo{margin:3em auto; font-size: 1.4em;text-align:center;background-repeat:no-repeat;background-position:center top;background-size: 28%;}
+        .btn{ text-align:center;}
+        .btn a{padding-left:1em;background-color:#219ded;display:inline-block;width:66%;text-align:center;line-height:2.2em;color:#fff;cursor:pointer;background-repeat:no-repeat;background-position:left 1.2em center;font-size: 1.2em;border-radius:0.4em; background-size:1em;}
+        .btn a.pg{ background-image:url(../images/pglogo_pic.png);}
+        .btn a.az{ background-image:url(../images/azlogo_pic.png);}
+        .btn{ text-align:center;}
+        .btn p{ margin:1.4em 0px;}
+        .azmx_info{ line-height:2em; text-align:left; margin:2em 1em; background-color:#fff; border-radius:0.5em; padding:0.8em; color:#666;}
+        .azmx_info .title{ line-height:3em; color:#333; font-size:1em;}
+        .azmx_info p{ color:#999; line-height:1.6em; margin-bottom:1em; font-size:0.8em;}
+        .azmx_info p img{max-width:80%;}
+        .top_title{ color:#333; position:fixed; line-height:3em; background-color:#FFF; border-bottom:1px solid #ddd; width:100%; font-size:0.9em; padding:0em 2em 0em 0.5em; text-align:center;}
+        .top_title .back{ float:left; width:1.4em; height:1.4em; display:inline-block; vertical-align:middle; background-repeat:no-repeat; background-position: center center; background-size:1.4em; margin-top:0.8em; background-image:url(../images/back_a2.png);}
+        .body_nav{ padding:3em 0.5em 1em 0.5em; font-size:0.8em; color:#333;}
+        .body_nav p{ margin-top:1em;}
+        .body_nav p img{ width:80%;}
+        .xxsm_tip{ margin:1em; border-radius:0.5em; background-color:#fff; padding:1em; font-size:0.7em; color:#666; line-height:1.8em;}
+        .xxaz{ margin-top:0.8em; color:#999;}
+        .img {
+            width:95%;margin: 20px;
+        }
+        .logo_div{
+            text-align: center;
+        }
+		.logo_img{
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+        }
+        .download{
+            padding-top: 50px
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="tips">
+            <img class="img" src="https://raw.githubusercontent.com/apexsoftcn/myipa/master/head.png">
+        </div>
+        
+        <div class="download">
+            <div class="logo_div">
+                <img class="logo_img" src="https://raw.githubusercontent.com/apexsoftcn/myipa/master/512*512.png">
+            </div>
+            <div class="logo">iPad移动展业</div>
+            <div class="btn">
+                <p><a class="pg" href="itms-services://?action=download-manifest&url=https://www.apexsoft.com.cn/app.plist">点击安装</a></p>
+            </div>
+            <div class="xxsm_tip">
+                <p>详细安装:</p>
+                <p class="xxaz">1、请使用 iPad 相机打开，对准二维码，不需要拍照<br />
+                    2、相机自动识别后，会自动 弹出 浏览器链接，点击即可<br />
+                    3、若用其他应用扫描，如微信，二维码识别后到下载网页时，可以将网页使用浏览器打开（微信中点击右三角三个点，浏览器打开）</p>
+            </div>
+            <div class="azmx_info">
+                <div class="title">ios 企业版应用的证书信任流程概要</div>
+                <p>到 设置 -> 通用 -> 设备管理 点击信任应用 完成，回到应用页进入即可</p>
+            </div>
+            
+         </div>
+         <div class="device" style="text-align:center;margin-top: 50px">
+                <p>请使用 iPad 安装应用</p>
+         </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>
+        $(".tips").hide();
+        $(".download").hide();
+        $(".device").hide();
+        if(navigator.userAgent.indexOf("QQ/")> -1 || navigator.userAgent.indexOf("MicroMessenger") > -1){
+            $(".tips").show();
+            $(".download").hide();
+        }else if(navigator.userAgent.indexOf("iPhone") > -1 || navigator.userAgent.indexOf("iPad") > -1 ){
+            $(".tips").hide();
+            $(".download").show();
+        }else {
+            $(".device").show();
+        }
+    </script>
+</html>
